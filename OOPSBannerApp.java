@@ -2,13 +2,20 @@ public class OOPSBannerApp {
 
     public static void main(String[] args) {
 
-        System.out.println(" *****    *****    ******    ****** ");
-        System.out.println("*     *  *     *   *     *   *      ");
-        System.out.println("*     *  *     *   *     *   *      ");
-        System.out.println("*     *  *     *   ******    *****  ");
-        System.out.println("*     *  *     *   *              * ");
-        System.out.println("*     *  *     *   *              * ");
-        System.out.println(" *****    *****    *         ****** ");
+        // Combined declaration + initialization
+        String[] banner = {
+                String.join("", " ***** ", "   ", " ***** ", "   ", " ****** ", "   ", " ****** "),
+                String.join("", "*     *", "  ", "*     *", "   ", "*     *", "   ", "*      "),
+                String.join("", "*     *", "  ", "*     *", "   ", "*     *", "   ", "*      "),
+                String.join("", "*     *", "  ", "*     *", "   ", "****** ", "   ", " ***** "),
+                String.join("", "*     *", "  ", "*     *", "   ", "*      ", "   ", "      *"),
+                String.join("", "*     *", "  ", "*     *", "   ", "*      ", "   ", "      *"),
+                String.join("", " ***** ", "   ", " ***** ", "   ", "*      ", "   ", " ******")
+        };
 
+        // Loop to print banner
+        for (String line : banner) {
+            System.out.println(line);
+        }
     }
 }
